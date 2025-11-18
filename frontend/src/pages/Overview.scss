@@ -1,0 +1,229 @@
+.overview-container {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  background-color: #f7f7f7;
+
+  .main-content {
+    width: 80%;
+    padding: 30px;
+    background-color: white;
+    overflow-y: auto; 
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+      color: #333;
+
+      span {
+        color: #f59e0b;
+      }
+    }
+  }
+  .dashboard-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef0f3;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    grid-template-areas:
+      "quick-start snapshot"
+      "activity activity";
+  }
+
+  .quick-start-cards {
+    grid-area: quick-start;
+    display: flex;
+    gap: 25px;
+
+    .action-card {
+      flex: 1;
+      padding: 25px;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+      border: 1px solid #eef0f3;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-icon {
+        font-size: 36px;
+        color: #f59e0b;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 18px;
+        justify-content: center;
+      }
+      p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .card-button {
+        background-color: #f59e0b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .performance-snapshot {
+    grid-area: snapshot;
+
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .stat-value {
+        font-size: 24px;
+        font-weight: 700;
+        color: #f59e0b;
+      }
+      .stat-label {
+        font-size: 16px;
+        color: #555;
+      }
+    }
+  }
+
+  .recent-activity {
+    grid-area: activity;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #fafafa;
+        }
+
+        .activity-type {
+          font-weight: 600;
+        }
+        .activity-score {
+          margin-left: auto;
+          background-color: #eef0f3;
+          padding: 4px 10px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .feedback-section {
+    margin-top: 25px; 
+
+    .feedback-content {
+      width: 100%;
+
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .feedback-form {
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          margin-bottom: 15px;
+          font-size: 16px;
+        }
+
+        .submit-feedback {
+          background-color: #f59e0b;
+          color: white;
+          border: none;
+          padding: 12px 20px;
+          font-size: 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          align-self: flex-start; 
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 1200px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "quick-start"
+        "snapshot"
+        "activity";
+    }
+    .quick-start-cards {
+      flex-direction: column;
+    }
+  }
+
+  @media(max-width: 768px) {
+    // Your previous styles for mobile were good, let's keep them
+    img {
+      display: none; // Hide the decorative image on small screens
+    }
+  }
+}
