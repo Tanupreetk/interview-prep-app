@@ -71,4 +71,43 @@
   border-radius: 5px;
 }
 }
+// Add this to your stylesheet (e.g., InterviewQA.scss)
+
+.questions-container {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-height: 50vh; // Give it some height
+  overflow-y: auto;
+}
+
+.question-item {
+  margin-bottom: 2.5rem; // The gap between questions
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .answer {
+    background-color: #f0fdf4; // Light green background
+    border-left: 4px solid #22c55e; // Green accent border
+    padding: 12px 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    white-space: pre-wrap; // This preserves line breaks in the AI's answer
+    line-height: 1.6;
+  }
+}
 
