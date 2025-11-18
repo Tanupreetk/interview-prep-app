@@ -13,6 +13,14 @@ const PORT = ENV_VARS.PORT || 3000; // Default port to 3000 if ENV_VAR is not se
 const app = express();
 const server = http.createServer(app); // Create HTTP server
 const socketIO = require("socket.io"); // Import socket.io
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://interview-prep-app-five.vercel.app"
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 // Initialize socket.io on the same server
 const io = socketIO(server, {
