@@ -15,6 +15,11 @@ import Results from './pages/Results.jsx'
 import "./App.scss"
 import 'react-tooltip/dist/react-tooltip.css'
 import { useState } from 'react'
+import RPS from "./pages/games/RPS";
+import GuessNumber from "./pages/games/GuessNumber";
+import FlashCards from "./pages/games/FlashCards";
+
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
@@ -129,5 +134,8 @@ function App() {
   </div>
 )}
 
+<Route path="/games/rps" element={<RPS />} />
+<Route path="/games/guess-number" element={<GuessNumber />} />
+<Route path="/games/flash-cards" element={<FlashCards />} />
 
 export default App
