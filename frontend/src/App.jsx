@@ -15,9 +15,6 @@ import Results from './pages/Results.jsx'
 import "./App.scss"
 import 'react-tooltip/dist/react-tooltip.css'
 import { useState } from 'react'
-import RPS from "./pages/RPS";
-import GuessNumber from "./pages/GuessNumber";
-import FlashCards from "./pages/FlashCards";
 
 
 const API_URL = import.meta.env.VITE_API_URL;
