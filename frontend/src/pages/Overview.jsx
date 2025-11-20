@@ -82,51 +82,6 @@ const Dashboard = () => {
             </div>
 
           </div> {/* End of dashboard-grid */}
-          {/* --- Game Section --- */}
-<div className="games-section dashboard-card">
-  <h3>🎮 Interactive Games</h3>
-  <p>Take a short break and sharpen your brain with fun mini-games!</p>
-
-  <div className="games-grid">
-
-    {/* --- Rock Paper Scissors --- */}
-    <div className="game-card">
-      <h4>Rock Paper Scissors</h4>
-      <p>Classic quick decision game.</p>
-      <button
-        onClick={() => navigate("/games/rps")}
-        className="game-button"
-      >
-        Play
-      </button>
-    </div>
-
-    {/* --- Guess the Number --- */}
-    <div className="game-card">
-      <h4>Guess the Number</h4>
-      <p>Guess a number between 1–10!</p>
-      <button
-        onClick={() => navigate("/games/guess-number")}
-        className="game-button"
-      >
-        Play
-      </button>
-    </div>
-
-    {/* --- Flash Cards --- */}
-    <div className="game-card">
-      <h4>Flash Cards</h4>
-      <p>Quick memory challenge.</p>
-      <button
-        onClick={() => navigate("/games/flash-cards")}
-        className="game-button"
-      >
-        Play
-      </button>
-    </div>
-
-  </div>
-</div>
           <div className="feedback-section dashboard-card">
             <div className="feedback-content">
               <h3>Interview Feedback Request</h3>
