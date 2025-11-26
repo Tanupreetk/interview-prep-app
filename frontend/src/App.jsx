@@ -21,6 +21,8 @@ import MultiplayerQuiz from './pages/MultiplayerQuiz.jsx';
 import "./App.scss"
 import 'react-tooltip/dist/react-tooltip.css'
 import { useState } from 'react'
+
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
@@ -166,5 +168,8 @@ function App() {
   </div>
 )}
 
+<Route path="/rps" element={<RPS />} />
+<Route path="/guess-number" element={<GuessNumber />} />
+<Route path="/flash-cards" element={<FlashCards />} />
 
 export default App
