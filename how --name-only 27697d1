@@ -1,0 +1,25 @@
+[33m3688758[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/Tanupreetk/interview-prep-app
+[33m27697d1[m added some features
+[33m03460c5[m Delete frontend/src/RPS.jsx
+[33m4c4e4ab[m Delete frontend/src/pages/RPS.jsx
+[33m1c72eef[m Update Overview.jsx
+[33me7ef0b5[m Delete frontend/src/pages/GuessNumber.jsx
+[33mf49ee74[m Delete frontend/src/pages/GameStyles.scss
+[33m537a27a[m Delete frontend/src/pages/FlashCards.jsx
+[33m9be009d[m Update App.jsx
+[33mff98794[m Update App.jsx
+[33m4705698[m Create GameStyles.scss
+[33m5187fcf[m Create FlashCards.jsx
+[33m211ac12[m Create GuessNumber.jsx
+[33mc708da8[m Create RPS.jsx
+[33m2821e12[m Update RPS.jsx
+[33ma1d3415[m Create RPS.jsx
+[33m311b608[m Update App.jsx
+[33m8a11e33[m Update Overview.jsx
+[33m24db138[m fixed the bugs
+[33m0e150cc[m updated files
+[33m980b588[m Removed README.md and updated project
+[33mbc31fb8[m Resolved README.md conflict by keeping remote version
+[33m86f0c8c[m edited files
+[33m6be4d6b[m Remove README content for project details
+[33m6adc344[m Initial commit
