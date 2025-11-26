@@ -1,0 +1,168 @@
+// frontend/src/components/CodePlayground.scss
+
+// Define reusable variables for easy theming
+:root {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-tertiary: #333333;
+  --border-color: #444444;
+  --text-primary: #d4d4d4;
+  --text-secondary: #cccccc;
+  --accent-color: #007acc;
+  --accent-hover: #005a9e;
+  --error-color: #f44747;
+  --success-color: #4ec9b0;
+  --info-color: #9cdcfe;
+}
+
+.code-playground {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 16px;
+  height: 100vh;
+  padding: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+// --- Editor Pane ---
+.editor-pane {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+
+  select {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .editor-actions {
+    display: flex;
+    gap: 8px;
+    button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: var(--bg-secondary);
+      }
+    }
+  }
+}
+
+
+// --- Output Pane ---
+.output-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.output-header {
+  display: flex;
+  gap: 8px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &.btn-primary {
+      background-color: var(--accent-color);
+      color: white;
+      &:hover:not(:disabled) {
+        background-color: var(--accent-hover);
+      }
+    }
+    &.btn-secondary {
+      background-color: var(--bg-tertiary);
+      color: var(--text-secondary);
+      &:hover:not(:disabled) {
+        background-color: #4d4d4d;
+      }
+    }
+  }
+}
+
+.console-output {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+
+  .console-line {
+    padding: 2px 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+
+    &.kind-log { color: var(--success-color); }
+    &.kind-error { color: var(--error-color); }
+    &.kind-info { color: var(--info-color); opacity: 0.7; }
+  }
+}
+
+// Spinner animation
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  animation: spin 1s linear infinite;
+}
+.home-button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 20px; // Make the icon a bit larger
+    cursor: pointer;
+    padding: 0 10px 0 0; // Add some spacing
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }

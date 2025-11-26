@@ -45,8 +45,12 @@ const Sidebar = () => {
             {userDetails.role==="candidate" && <li><Link to={'/quiz'}>
               <i className="fa-solid fa-brain interviews-icon"></i> {isOpen ? "Interview Quiz" : ""}
             </Link></li>}
-            {/* <li><Link to={'/createroom'}><i className="fas fa-video video-icon"></i>  {isOpen ? "Create Room" : ""}
-            </Link></li> */}
+            <li><Link to={'/createroom'}><i className="fas fa-video video-icon"></i>  {isOpen ? "Create Room" : ""}
+            
+            </Link></li>
+            <li><Link to={'/codeplayground'}><i className="fas fa-code code-icon"></i>  {isOpen ? "Code Playground" : ""}
+            </Link></li>
+           
             <li><Link to={'/profile'} ><i className="fas fa-user profile-icon"></i>   {isOpen ? "Profile" : ""}
             </Link></li>
             <li onClick={logout}><i className="fas fa-sign-out-alt logout-icon"></i> {isOpen ? "Logout" : ""}

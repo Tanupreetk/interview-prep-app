@@ -11,7 +11,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InterviewQuiz from './pages/InterviewQuiz.jsx'
 import Quiz from './pages/Quiz.jsx'
+import CodePlayground from './components/CodePlayground.jsx'
 import Results from './pages/Results.jsx'
+import Room from './pages/Room.jsx'
+import VideoCall from './pages/VideoCall.jsx';
+import CallNavbar from './components/CallNavbar.jsx';
+import QuizLobby from './pages/QuizLobby.jsx';
+import MultiplayerQuiz from './pages/MultiplayerQuiz.jsx';
 import "./App.scss"
 import 'react-tooltip/dist/react-tooltip.css'
 import { useState } from 'react'
@@ -35,7 +41,7 @@ function App() {
       }
     };
   
-    const intervalId = setInterval(checkServerStatus, 5000); // Check every 5 seconds
+    const intervalId = setInterval(checkServerStatus, 15000); // Check every 5 seconds
   
     // Initial check
     checkServerStatus();
@@ -77,6 +83,7 @@ function App() {
       path: "/qa",
       element: user ? <InterviewQA /> : <Navigate to="/" />
     },
+   
     {
       path: "/quiz",
       element: user ? <InterviewQuiz /> : <Navigate to="/" />
@@ -86,6 +93,10 @@ function App() {
       element: user ? <Quiz /> : <Navigate to="/" />
     },
     {
+      path: "/codeplayground",
+      element: user ? <CodePlayground /> : <Navigate to="/" />
+    },
+    {
       path: "/results/:id",
       element: user ? <Results /> : <Navigate to="/" />
     },
@@ -93,7 +104,33 @@ function App() {
       path: "/profile",
       element: user ? <Profile /> : <Navigate to="/" />
     },
-    
+    {
+      path: "/createroom",
+      element: <><Room /></>
+    },
+    {
+      path: "/createroom/:id",
+      element: <><CallNavbar /><VideoCall /></>
+    },
+   {
+      path: "/quiz/lobby/:id",
+      element: user ? <QuizLobby /> : <Navigate to="/" />,
+    },
+    //  {
+    //   path: "/createroom/",
+    //   element: user ? <VideoCall /> : <Navigate to="/" />,
+    // },
+    //  {
+    //   path: "/room/:roomID",
+    //   element: user ? <Room /> : <Navigate to="/" />,
+    // },
+    // {
+    //   path: "/quiz/play/:id",
+    //   element: user ? <MultiplayerQuiz /> : <Navigate to="/" />,
+    // },
+    {
+      
+    },
     {
       path: "/*",
       element: <Page404 />

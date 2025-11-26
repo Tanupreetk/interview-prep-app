@@ -1,11 +1,7 @@
-const app = require("express")();
-const { ENV_VARS } = require("../config/envVar.js");
-const socketIO = require("socket.io"); // Import socket.io
+// backend/socket.js
 
 function initializeSocket(io) {
-  
-
-  const users = {}; // To track users in each room
+   const users = {}; // To track users in each room
 
   io.on("connection", (socket) => {
     // Handling video call signals
@@ -79,8 +75,7 @@ function initializeSocket(io) {
     });
   });
 
-  app.use("/api/v1/rooms", require("../routes/rooms.js"));
+//   app.use("/api/v1/rooms", require("../routes/rooms.js"));
 
 }
-
 module.exports = { initializeSocket };

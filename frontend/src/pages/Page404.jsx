@@ -23,7 +23,7 @@ const Page404 = () => {
 <svg>
   <defs>
     <filter id="glow">
-      <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
+      <fegaussianblur className="blur" result="coloredBlur" stdDeviation="4"></fegaussianblur>
       <femerge>
         <femergenode in="coloredBlur"></femergenode>
         <femergenode in="SourceGraphic"></femergenode>

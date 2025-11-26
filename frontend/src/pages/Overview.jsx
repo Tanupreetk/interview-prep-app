@@ -38,7 +38,7 @@ const Dashboard = () => {
             </h2>
           </header>
           <div className="dashboard-grid">
-                        <div className="quick-start-cards">
+            <div className="quick-start-cards">
               <div className="action-card" onClick={() => navigate('/qa')}>
                 <FaBook className="card-icon" />
                 <h3>Practice Q/A</h3>
@@ -95,6 +95,47 @@ const Dashboard = () => {
               </form>
             </div>
           </div>
+          {/* <div className="games-section dashboard-card">
+            <h3>🎮 Interactive Games</h3>
+            <p>Take a short break and sharpen your brain with fun mini-games!</p>
+
+            <div className="games-grid">
+
+              <div className="game-card">
+                <h4>Rock Paper Scissors</h4>
+                <p>Classic quick decision game.</p>
+                <button
+                  onClick={() => navigate("/games/rps")}
+                  className="game-button"
+                >
+                  Play
+                </button>
+              </div>
+
+              <div className="game-card">
+                <h4>Guess the Number</h4>
+                <p>Guess a number between 1–10!</p>
+                <button
+                  onClick={() => navigate("/games/guess-number")}
+                  className="game-button"
+                >
+                  Play
+                </button>
+              </div>
+
+              <div className="game-card">
+                <h4>Flash Cards</h4>
+                <p>Quick memory challenge.</p>
+                <button
+                  onClick={() => navigate("/games/flash-cards")}
+                  className="game-button"
+                >
+                  Play
+                </button>
+              </div>
+
+            </div>
+          </div> */}
         </div>
       </div>
     </>

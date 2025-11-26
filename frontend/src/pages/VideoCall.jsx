@@ -52,6 +52,7 @@ const VideoCall = () => {
     peer.on("error", (err) => {
       console.log("Peer error: ", err);
       if (err.toString().includes("Connection failed")) {
+        // Handle connection failure (e.g., try to reconnect or remove peer)
         removePeer(userToSignal);
       }
     });
